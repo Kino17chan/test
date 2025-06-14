@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Her Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="/images/logo.png" alt="PHU Logo" class="logo">
+    <h2>Power Her Up</h2>
+    <button type="button" id="logout-btn">Logout</button>
+  </header>
+
+  <div class="profile-container">
+    <div class="avatar-section">
+      <div class="avatar-frame">
+        <img src="https://via.placeholder.com/100" alt="Profile" class="avatar" id="profile-photo">
+        <img src="/images/transparent.jpg" alt="Frame" class="frame-overlay" id="avatar-frame-overlay">
+        <label class="upload-label">
+          <input type="file" id="upload-photo" accept="image/*" hidden>
+        </label>
+      </div>
+      <div class="avatar-buttons">
+        <button type="button" class="btn-change-photo" onclick="document.getElementById('upload-photo').click()">📷 Change Photo</button>
+        <button type="button" class="btn-frame-shop" onclick="window.location.href='frame-shop.html'">🎨 Frame Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-info">
+    <h1 id="name"></h1>
+    <p id="email"></p>
+    <p id="location"></p>
+    <div id="bio-section">
+      <input type="text" id="bio-input" placeholder="Write your bio..." >
+      <button type="button" id="bio-save-btn" class="btn-save-bio" onclick="saveBio()">Save Bio</button>
+
+    </div>
+    <p id="bio"></p>
+  </div>
+
+  <div class="points-section">
+    <h2>🌟 Points: <span id="points">0</span></h2>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar" style="width: 0%; height: 10px; background: #7b52d9;"></div>
+    </div>
+  </div>
+
+  <div class="activity-section">
+    <h2>🚀 Earn More Points</h2>
+    <button type="button" onclick="completeActivity(2, 'lastForumCommentDate', 'btn-forum-comment')" id="btn-forum-comment">Comment in the Discussion Forum +2</button>
+    <button type="button" onclick="completeActivity(5, 'lastForumPostDate', 'btn-forum-post')" id="btn-forum-post">Forum Post +5</button>
+    <button type="button" onclick="completeActivity(5, 'lastDailyQuizDate', 'btn-daily-quiz')" id="btn-daily-quiz">Daily Quiz +5</button>
+    <button type="button" onclick="completeActivity(3, 'lastSuperstarIdeasDate', 'btn-superstar-ideas')" id="btn-superstar-ideas">Submit Superstar Ideas +3</button>
+    <button type="button" onclick="completeActivity(5, 'lastLikeBlogDate', 'btn-like-blog')" id="btn-like-blog">Like Blog Post +5</button>
+    <button type="button" onclick="completeActivity(8, 'lastGraphicsCreateDate', 'btn-graphics-create')" id="btn-graphics-create">Create Graphics for Wellbeing +8</button>
+  </div>
+
+  <div class="dashboard-section">
+    <div class="streak">
+      🔥 <strong>Daily Streak:</strong> <span id="streak">0</span> days in a row!
+    </div>
+
+    <div class="tier-path-container">
+      <div class="tier-path vertical" id="tier-path">
+        <div class="tier pearl active" id="tier-pearl">
+          <img src="/images/lady.png" alt="Woman standing" id="woman-avatar" class="woman-avatar">
+          <span class="badge pearl">Pearl Girl</span>
+        </div>
+        <div class="connector"></div>
+        <div class="tier bronze" id="tier-bronze"><span class="badge bronze">Bronze Boss</span></div>
+        <div class="connector"></div>
+        <div class="tier silver" id="tier-silver"><span class="badge silver">Silver Star</span></div>
+        <div class="connector"></div>
+        <div class="tier gold" id="tier-gold"><span class="badge gold">Gold Trailblazer</span></div>
+        <div class="connector"></div>
+        <div class="tier amethyst" id="tier-amethyst"><span class="badge amethyst">Amethyst Adventurer</span></div>
+        <div class="connector"></div>
+        <div class="tier emerald" id="tier-emerald"><span class="badge emerald">Emerald Enthusiast</span></div>
+        <div class="connector"></div>
+        <div class="tier platinum" id="tier-platinum"><span class="badge platinum">Platinum Powerhouse</span></div>
+        <div class="connector"></div>
+        <div class="tier opal" id="tier-opal"><span class="badge opal">Opal Optimistic</span></div>
+      </div>
+
+      <div class="surprise-box" id="surprise-box" title="Click me for your daily surprise!">
+        <img src="/images/Box.png" alt="Daily Surprise Box" class="surprise-box-image">
+        <p> Click the box for your daily surprise!</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>

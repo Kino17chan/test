@@ -1,0 +1,110 @@
+/* Color palette: pink, orange, sky blue, black, white */
+:root {
+    --pink: #ff6fa3;
+    --orange: #ff9f43;
+    --sky: #7ed6df;
+    --black: #2d3436;
+    --white: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: linear-gradient(135deg, var(--pink), var(--sky));
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .auth-container {
+    background: var(--white);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .logo-auth {
+    width: 60px;
+    max-width: 60px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .auth-container h1 {
+    color: var(--black);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--sky);
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: var(--white);
+    transition: border-color 0.3s;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: var(--pink);
+    box-shadow: 0 0 5px rgba(255,111,163,0.5);
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--pink);
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background: var(--orange);
+  }
+  
+  button[type="submit"]:active {
+    transform: scale(0.97);
+  }
+  
+  .login-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--black);
+  }
+  
+  .login-text a {
+    color: var(--pink);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .login-text a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

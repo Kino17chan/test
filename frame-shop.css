@@ -1,0 +1,63 @@
+:root {
+    --pink: #ff6fa3;
+    --orange: #ff9f43;
+    --sky: #7ed6df;
+    --white: #ffffff;
+    --black: #2d3436;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, var(--pink), var(--sky));
+    color: var(--black);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .shop-container {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .frames-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .frame-card {
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--white);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  .frame-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  button.buy-btn {
+    margin-top: 0.5rem;
+    padding: 5px 10px;
+    border: none;
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button.buy-btn:disabled {
+    background: rgb(240, 106, 171);
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Power Her Up</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <img src="images/logo.png" alt="Power Her Up Logo" class="logo-auth">
+
+    <h1>Power Her Up</h1>
+    <p class="subtitle">Awaken your inner power ✨</p>
+
+    <form id="auth-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="date" id="dob" placeholder="Date of Birth" required>
+      <input type="text" id="country" placeholder="Country" required>
+
+      <select id="state" required class="hidden">
+        <option value="">Select your State</option>
+        <option value="NSW">New South Wales</option>
+        <option value="VIC">Victoria</option>
+        <option value="QLD">Queensland</option>
+        <option value="WA">Western Australia</option>
+        <option value="SA">South Australia</option>
+        <option value="TAS">Tasmania</option>
+        <option value="ACT">Australian Capital Territory</option>
+        <option value="NT">Northern Territory</option>
+      </select>
+
+      <div class="gender-group">
+        <label><input type="radio" name="gender" value="woman" required> Woman</label>
+        <label><input type="radio" name="gender" value="man" required> Man</label>
+      </div>
+
+      <div class="checkbox-group">
+        <label class="required-label">
+          <input type="checkbox" id="terms" name="terms" required>
+          I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>.
+        </label>
+        <label class="required-label">
+          <input type="checkbox" id="wictech" name="wictech" required>
+          I acknowledge that by joining Power Her Up, I also become a member of Women in Creative Technologies.
+        </label>
+        <label>
+          <input type="checkbox" id="subscribe" name="subscribe">
+          Keep me updated with events and empowering news via email.
+        </label>
+      </div>
+      <button type="submit" id="signup-btn">Sign Up</button>
+
+      <p class="login-text">
+        Already have an account?
+        <a href="login.html" id="login-btn">Log In</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
